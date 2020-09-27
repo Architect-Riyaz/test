@@ -2,27 +2,27 @@
 <html>
     <!-- 8b735135-7995-4144-803b-fe518edd03df  -->
 <head>
-	<title></title>
-	<script src="https://smtpjs.com/v3/smtp.js"></script>  
-	<script type="text/javascript">
-		function sendEmail() {
-			Email.send({
-				SecureToken : "b01da3a8-5a07-489c-94a9-e5d5f10c3cbc",
-				To : 'shaikh.riyazuddin.509@gmail.com',
-				From : "riyaz.aptech@gmail.com",
-				Subject : "Test mail",
-				Body : "This mail is send to test.",
-			})
-			.then(function(message){
-                alert(message)
-				alert("mail sent successfully")
-			});
-		}
-	</script>
+	<title>Send Mail</title>
+
 </head>
 <body>  
-	<form method="post">
-		<input type="button" value="Send Email" onclick="sendEmail()"/>
-	</form>  
+	<form
+  action="https://formspree.io/riyaz.aptech@gmail.com"
+  method="POST"
+>
+  <label>
+    Your Name:
+    <input type="text" name="name">
+  </label>
+  <label>
+    Your Email:
+    <input type="email" name="_replyto">
+  </label>
+  <label>
+    Message:
+    <textarea name="message"></textarea>
+  </label>
+  <input type="submit" value="Send">
+</form>
 </body>
 </html>
