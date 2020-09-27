@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <!-- 8b735135-7995-4144-803b-fe518edd03df  -->
+<head>
+	<title></title>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>  
+	<script type="text/javascript">
+		function sendEmail() {
+			Email.send({
+				SecureToken : "060c12cc-12bf-47c9-adcf-b10def078718",
+				To : 'shaikh.riyazuddin.509@gmail.com',
+				From : "riyaz.aptech@gmail.com",
+				Subject : "Test mail",
+				Body : "This mail is send to test.",
+			})
+			.then(function(message){
+                alert(message)
+				alert("mail sent successfully")
+			});
+		}
+	</script>
+</head>
+<body>  
+	<form method="post">
+		<input type="button" value="Send Email" onclick="sendEmail()"/>
+	</form>  
+</body>
+</html>
